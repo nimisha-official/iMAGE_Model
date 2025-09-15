@@ -1,5 +1,4 @@
-# 🖼️ Stable Diffusion 1.5 - CPU (Streamlit)
-
+# 🖼️ Stable Diffusion 1.5
 This project is a simple Streamlit app that lets you generate images using **Stable Diffusion 1.5** locally on your CPU.
 
 
