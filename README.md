@@ -2,7 +2,6 @@
 
 This project is a simple Streamlit app that lets you generate images using **Stable Diffusion 1.5** locally on your CPU.
 
----
 
 ## 🔹 1. Import Libraries
 
@@ -16,7 +15,7 @@ import torch
 - **diffusers** → Hugging Face library that loads and runs Stable Diffusion models.  
 - **torch** → backend (PyTorch) that actually runs the neural network.  
 
----
+
 
 ## 🔹 2. Load the Model (only once, cached)
 
@@ -34,7 +33,6 @@ def load_model():
 - Moves the pipeline to **CPU** (since you don’t have a GPU).  
 - 💡 `@st.cache_resource` ensures the model is loaded **only once** → not every time you click the button.  
 
----
 
 ## 🔹 3. Streamlit UI
 
@@ -46,7 +44,6 @@ prompt = st.text_area("Enter your prompt:", "a fantasy castle on a mountain at s
 - Shows a page title.  
 - Adds a text box where you type your prompt (default is `"a fantasy castle on a mountain at sunset"`).  
 
----
 
 ## 🔹 4. Generate Button
 
@@ -68,7 +65,7 @@ When you press **Generate**, it:
 - Saves it locally as **output.png**.  
 - Shows ✅ success message.  
 
----
+
 
 ## 🔹 What actually happens in the background
 
@@ -76,7 +73,7 @@ When you press **Generate**, it:
 2. The model starts with random noise → gradually denoises into an image guided by your prompt.  
 3. This process is slow on CPU because it runs **thousands of matrix multiplications**.  
 
----
+
 
 ## ✅ Summary
 
@@ -85,3 +82,8 @@ You get a **mini local Stable Diffusion app** where you:
 - Click a button  
 - Wait a few minutes  
 - Get an image both on screen and saved to disk 🎉  
+
+## 🧞‍♂️ Screenshort
+
+<img width="1920" height="884" alt="image" src="https://github.com/user-attachments/assets/58187aed-45aa-4d76-b709-63e2690c0d7d" />
+
